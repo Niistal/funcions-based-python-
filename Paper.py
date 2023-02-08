@@ -1,22 +1,14 @@
 from random import randint
 import os
+import time
 
-a = 0
-print("MENU:")
-print("=======================================")
-print("1.-Rock,Paper,Scissors")
-print("2.-Tic tac toe")
-print("3.-Preguntados")
 
-match a:
-    case 1:RockPaperScissors()
-    case 2:TicTacToe()
-    case 3:Preguntados()
 
 def RockPaperScissors():
     #create a list of play options
     t = ["Rock", "Paper", "Scissors"]
-
+    score1=0
+    score2=0
     #assign a random play to the computer
     computer = t[randint(0,2)]
 
@@ -30,19 +22,31 @@ def RockPaperScissors():
             print("Tie!")
         elif player == "Rock":
             if computer == "Paper":
+                score2+1
                 print("You lose!", computer, "covers", player)
+                print(score1,"-",score2)
             else:
+                score1+1
                 print("You win!", player, "smashes", computer)
+                print(score1,"-",score2)
         elif player == "Paper":
             if computer == "Scissors":
+                score2+1
                 print("You lose!", computer, "cut", player)
+                print(score1,"-",score2)
             else:
+                score1+1
                 print("You win!", player, "covers", computer)
+                print(score1,"-",score2)
         elif player == "Scissors":
             if computer == "Rock":
+                score2+1
                 print("You lose...", computer, "smashes", player)
+                print(score1,"-",score2)
             else:
+                score1+1
                 print("You win!", player, "cut", computer)
+                print(score1,"-",score2)
         else:
             print("That's not a valid play. Check your spelling!")
         #player was set to True, but we want it to be False so the loop continues
@@ -138,3 +142,14 @@ def tablero(a):
     print(a[6] + " |")
     print(a[7] + "|")
     print(a[8])
+    
+a = 0   
+print("MENU:")
+print("=======================================")
+print("1.-Rock,Paper,Scissors")
+print("2.-Tic tac toe")
+print("3.-Preguntados")
+
+match a:
+    case 1:RockPaperScissors()
+    case 2:TicTacToe()
