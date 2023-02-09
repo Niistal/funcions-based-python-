@@ -4,16 +4,20 @@ import time
 
 
 def tablero(a):
-    print(str(a[0]) + " |" + str(a[1]) + "|" + str(a[2]))
+    print()
+    print(str(a[0]) + " | " + str(a[1]) + " | " + str(a[2]))
     print("--------")
-    print(str(a[3]) + " |" + str(a[4]) + "|" + str(a[5]))
+    print(str(a[3]) + " | " + str(a[4]) + " | " + str(a[5]))
     print("--------")
-    print(str(a[6]) + " |" + str(a[7]) + "|" + str(a[8]))
+    print(str(a[6]) + " | " + str(a[7]) + " | " + str(a[8]))
+    print()
 
 
-def p1aldatu(a):
-    tablero(a)
+def p1aldatu(a,name1):
+
+    print(str(name1) + "'s turn")
     player = int(input("Enter a number from 1 to 9"))
+    tablero(a)
     if a[player] == 0:
         a[player] = 'X'
     else:
@@ -21,10 +25,15 @@ def p1aldatu(a):
             b = int(
                 input("Select another number, the one you selected is already chosen:"))
         a[b]
+    time.sleep(2)
+    os.system("cls")
+    
 
-def p2aldatu(a):
-    tablero(a)
+def p2aldatu(a,name2):
+    
+    print(str(name2) + "'s turn")
     player = int(input("Enter a number from 1 to 9"))
+    tablero(a)
     if a[player] == 0:
         a[player] = 'O'
     else:
@@ -32,14 +41,18 @@ def p2aldatu(a):
             b = int(
                 input("Select another number, the one you selected is already chosen:"))
         a[b]
+    time.sleep(4)
+    os.system("cls")
 
 
 def cpualdatu(a):
-    print("cpu's Turn")
-    while b < 3:
-        print(".")
+    print("cpu's Turn",end = "")
+    b = 0
+    while b <= 3:
+        print(".",end="")
         time.sleep(1)
-        b = + 1
+        b = b + 1
+    cpu = randint(0, 8)
     while cpu != a in range(0, 8):
         cpu = randint(0, 8)
     a[cpu] = 'O'
@@ -104,48 +117,53 @@ def TicTacToe():
     print("============================================================")
     print("1.-Single player")
     print("2.-Multiplayer")
-
-    while sing != 1 or sing != 2:
-        sing = int(input())
+    sing = int(input())
+    if (sing != 1) and (sing != 2):
+        while (sing != 1) and (sing != 2):
+            sing = int(input("Not a valid input,Select a diferent option please")) 
+    if sing == 1:
+        z = 1
+    elif sing == 2:
+        z = 2
 
     while c != 1:
         d = 1
         if sing == 1:
-            player1 = str(input("Enter your name please:"))
+            if z == 1:
+                player1 = str(input("Enter your name please:"))
+                z = -1
             while d == 1:
-                p1aldatu(a)
+                p1aldatu(a,player1)
                 d = 2
-                time.sleep(3)
-                os.system('cls')
+                time.sleep(1)
             while d == 2:
                 cpualdatu(a)
                 d = 1
-            os.system('cls')
             # check for player
 
             if a[0] == 'X' and a[1] == 'X' and a[2] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[0] == 'X' and a[3] == 'X' and a[6] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[0] == 'X' and a[4] == 'X' and a[8] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[6] == 'X' and a[4] == 'X' and a[2] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[3] == 'X' and a[4] == 'X' and a[5] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[6] == 'X' and a[7] == 'X' and a[8] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[7] == 'X' and a[4] == 'X' and a[1] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[8] == 'X' and a[4] == 'X' and a[2] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
 
                 # check for cpu
@@ -174,67 +192,69 @@ def TicTacToe():
                 print("cpu wins")
                 c = 1
         elif sing == 2:
-            player1 = str(input("Enter player 1's name please:"))
-            player2 = str(input("Enter player 2's name please:"))
+            if z == 2:
+                player1 = str(input("Enter player 1's name please:"))
+                player2 = str(input("Enter player 2's name please:"))
+                z = -1
             while d == 1:
-                p1aldatu(a)
+                p1aldatu(a,player1)
                 d = 2
                 time.sleep(3)
                 os.system('cls')
             while d == 2:
-                p2aldatu(a)
+                p2aldatu(a,player2)
                 d = 1
                 time.sleep(3)
             
             if a[0] == 'X' and a[1] == 'X' and a[2] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[0] == 'X' and a[3] == 'X' and a[6] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[0] == 'X' and a[4] == 'X' and a[8] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[6] == 'X' and a[4] == 'X' and a[2] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[3] == 'X' and a[4] == 'X' and a[5] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[6] == 'X' and a[7] == 'X' and a[8] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[7] == 'X' and a[4] == 'X' and a[1] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
             elif a[8] == 'X' and a[4] == 'X' and a[2] == 'X':
-                print(player1 + "wins")
+                print(player1 + " wins")
                 c = 1
 
                 # check for player 2
             if a[0] == 'O' and a[1] == 'O' and a[2] == 'O':
-                print(player2 + "wins")
+                print(player2 + " wins")
                 c = 1
             elif a[0] == 'O' and a[3] == 'O' and a[6] == 'O':
-                print(player2 + "wins")
+                print(player2 + " wins")
                 c = 1
             elif a[0] == 'O' and a[4] == 'O' and a[8] == 'O':
-                print(player2 + "wins")
+                print(player2 + " wins")
                 c = 1
             elif a[6] == 'O' and a[4] == 'O' and a[2] == 'O':
-                print(player2 + "wins")
+                print(player2 + " wins")
                 c = 1
             elif a[3] == 'O' and a[4] == 'O' and a[5] == 'O':
-                print(player2 + "wins")
+                print(player2 + " wins")
                 c = 1
             elif a[6] == 'O' and a[7] == 'O' and a[8] == 'O':
-                print(player2 + "wins")
+                print(player2 + " wins")
                 c = 1
             elif a[7] == 'O' and a[4] == 'O' and a[1] == 'O':
-                print(player2 + "wins")
+                print(player2 + " wins")
                 c = 1
             elif a[8] == 'O' and a[4] == 'O' and a[2] == 'O':
-                print(player2 + "wins")
+                print(player2 + " wins")
                 c = 1
 
 
