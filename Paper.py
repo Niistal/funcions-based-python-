@@ -64,69 +64,67 @@ def cpualdatu(a):#generates a pseudo random number and selects the cell
 
 
 def RockPaperScissors():
-     from random import randint
 
-t = ["Rock", "Paper", "Scissors", "Exit"]
-score1 = 0
-score2 = 0
+    t = ["Rock", "Paper", "Scissors", "Exit"]
+    score1 = 0
+    score2 = 0
 
-computer = t[randint(0, 2)]
-
-# set player to False
-player = False
-
-while not player:
-
-    # set player to True
-    player = input("Rock, Paper, Scissors, Exit?")
-    if player == computer:
-        print("Tie!")
-        print(score1, "-", score2)
-    elif player == "Rock":
-        if computer == "Paper":
-            score2 += 1
-            print("You lose!", computer, "covers", player)
-            print(score1, "-", score2)
-        else:
-            score1 += 1
-            print("You win!", player, "smashes", computer)
-            print(score1, "-", score2)
-    elif player == "Paper":
-        if computer == "Scissors":
-            score2 += 1
-            print("You lose!", computer, "cut", player)
-            print(score1, "-", score2)
-        else:
-            score1 += 1
-            print("You win!", player, "covers", computer)
-            print(score1, "-", score2)
-    elif player == "Scissors":
-        if computer == "Rock":
-            score2 += 1
-            print("You lose...", computer, "smashes", player)
-            print(score1, "-", score2)
-        else:
-            score1 += 1
-            print("You win!", player, "cut", computer)
-            print(score1, "-", score2)
-    elif player == "Exit":
-        print("The final score is", score1, "-", score2)
-        if score1 > score2:
-            print("You win")
-        elif score1 == score2:
-            print("There is a tie")
-        elif score2 > score1:
-            print("Sorry...You lost")
-        player = True
-        exit()
-
-    else:
-        print("That's not a valid play. Check your spelling!")
-    # player was set to True, but we want it to be False so the loop continues
-
-    player = False
     computer = t[randint(0, 2)]
 
+    # set player to False
+    player = False
+
+    while not player:
+
+        # set player to True
+        player = input("Rock, Paper, Scissors, Exit?")
+        if player == computer:
+            print("Tie!")
+            print(score1, "-", score2)
+        elif player == "Rock":
+            if computer == "Paper":
+                score2 += 1
+                print("You lose!", computer, "covers", player)
+                print(score1, "-", score2)
+            else:
+                score1 += 1
+                print("You win!", player, "smashes", computer)
+                print(score1, "-", score2)
+        elif player == "Paper":
+            if computer == "Scissors":
+                score2 += 1
+                print("You lose!", computer, "cut", player)
+                print(score1, "-", score2)
+            else:
+                score1 += 1
+                print("You win!", player, "covers", computer)
+                print(score1, "-", score2)
+        elif player == "Scissors":
+            if computer == "Rock":
+                score2 += 1
+                print("You lose...", computer, "smashes", player)
+                print(score1, "-", score2)
+            else:
+                score1 += 1
+                print("You win!", player, "cut", computer)
+                print(score1, "-", score2)
+        elif player == "Exit":
+            print("The final score is", score1, "-", score2)
+            if score1 > score2:
+                print("You win")
+            elif score1 == score2:
+                print("There is a tie")
+            elif score2 > score1:
+                print("Sorry...You lost")
+            player = True
+            exit()
+
+        else:
+            print("That's not a valid play. Check your spelling!")
+        # player was set to True, but we want it to be False so the loop continues
+
+        player = False
+        computer = t[randint(0, 2)]
 
 def TicTacToe():
     a = [0, 0, 0, 0, 0, 0, 0, 0, 0]
