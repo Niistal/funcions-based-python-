@@ -16,15 +16,16 @@ def tablero(a):
 def p1aldatu(a,name1):
 
     print(str(name1) + "'s turn")
-    player = int(input("Enter a number from 1 to 9"))
+    print("Enter a number from 1 to 9")
     tablero(a)
-    if a[player] == 0:
-        a[player] = 'X'
+    b = int(input())
+    if a[b] == 0:
+        a[b] = 'X'
     else:
         while b == a in range(0, 8):
-            b = int(
-                input("Select another number, the one you selected is already chosen:"))
+            b = int(input("Select another number, the one you selected is already chosen:"))
         a[b]
+    tablero(a)
     time.sleep(2)
     os.system("cls")
     
@@ -32,8 +33,9 @@ def p1aldatu(a,name1):
 def p2aldatu(a,name2):
     
     print(str(name2) + "'s turn")
-    player = int(input("Enter a number from 1 to 9"))
+    print("Enter a number from 1 to 9")
     tablero(a)
+    player= int(input())
     if a[player] == 0:
         a[player] = 'O'
     else:
@@ -41,7 +43,8 @@ def p2aldatu(a,name2):
             b = int(
                 input("Select another number, the one you selected is already chosen:"))
         a[b]
-    time.sleep(4)
+    tablero(a)
+    time.sleep(2)
     os.system("cls")
 
 
@@ -53,7 +56,7 @@ def cpualdatu(a):
         time.sleep(1)
         b = b + 1
     cpu = randint(0, 8)
-    while cpu != a in range(0, 8):
+    while cpu == a in range(0, 8):
         cpu = randint(0, 8)
     a[cpu] = 'O'
     tablero(a)
