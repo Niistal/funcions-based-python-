@@ -219,24 +219,24 @@ while num != 6:
     print("5-Art")
     print("6-exit")
     print("___________________")
-    num = int(input(" what topic do you want \n")
+    num = int(input("what topic do you want \n"))
 
     if num == 1:
         history()
 
-    if num == 2:
+    elif num == 2:
         sport()
 
-    if num == 3:
+    elif num == 3:
         entertainment()
 
-    if num == 4:
+    elif num == 4:
         geography()
 
-    if num == 5:
+    elif num == 5:
         art()
 
-    num = int(input(" what topic do you want \n")
+    
 
 print(score)
 
