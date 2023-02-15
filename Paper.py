@@ -317,8 +317,8 @@ def Preguntadosbutrandomized():
         a = int(randint(0,5))
         print(topics[a])
         print("And the question is...")
-        if topics== 1:
-            a= random.randint(0,3)
+        if a == 1:
+            a = random.randint(0,3)
             print(qart[a])
             answer = str(input("Enter the answer:"))
             answer.lower()
@@ -329,7 +329,7 @@ def Preguntadosbutrandomized():
             else:
                 print("wrongggggg")
                 count+1
-        elif topics==2:
+        elif a ==2:
             a = random.randint(0, 3)
             print(qhistory[a])
             answer = str(input("Enter the answer:"))
@@ -341,7 +341,7 @@ def Preguntadosbutrandomized():
             else:
                 print("wrongggggg")
                 count+1
-        elif topics==3:
+        elif a ==3:
             a = random.randint(0, 3)
             print(qsport[a])
             answer = str(input("Enter the answer:"))
@@ -353,7 +353,7 @@ def Preguntadosbutrandomized():
             else:
                 print("wrongggggg")
                 count + 1
-        elif topics==4:
+        elif a == 4:
             a = random.randint(0, 3)
             print(qentertainment[a])
             answer = str(input("Enter the answer:"))
@@ -365,7 +365,7 @@ def Preguntadosbutrandomized():
             else:
                 print("wrongggggg")
                 count + 1
-        elif topics==5:
+        elif a == 5:
             a = random.randint(0, 3)
             print(qgeography[a])
             answer = str(input("Enter the answer:"))
