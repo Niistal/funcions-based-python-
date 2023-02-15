@@ -292,7 +292,7 @@ def TicTacToe():
 
 
 def Preguntadosbutrandomized():
-    topics =["Art", "History", "Sports", "Entertainment", "Geography"]
+    topics = ["Art", "History", "Sports", "Entertainment", "Geography"]
     qart= ["Who painted the Mona Lisa?", "Who painted the last dinner?", "What city is depicted in Van Gogh's The Starry Night?"]
     aart=["da vinci","da vinci", "saint-remy"]
     qentertainment= ["Who is the main character in the pokemon series?", "What is the most famous technique of goku from dragon ball?","What is the name of the film that toys have sense of life?"]
@@ -305,79 +305,75 @@ def Preguntadosbutrandomized():
     ageography = ["tokio","everest","washington"]
     name = str(input("Enter your name please:"))
     score=0
-    print("Hello" + name + "today you are gonna play a little quiz and you can't choose anything,you will only answer to five questions that are chosen randomly (the answers must be in lowercase)")
+    print("Hello " + name + " today you are gonna play a little quiz and you can't choose anything,you will only answer to five questions that are chosen randomly (the answers must be in lowercase)")
     print("Are you readyyyyyy?")
     count=0
-    while count <=5:
-        num = 3
-        if count == 0:
-            print("and the topic is",end="")
-            for i in range(1, num + 1):
-                print("." ,end="")
-        a = int(randint(0,5))
-        print(topics[a])
-        print("And the question is...",end="")
-        if a == 1:
-            a = random.randint(0,3)
+    while count < 5:
+        print("and the topic is...")
+        chosenTopic = random.choice(topics)
+        print(chosenTopic)
+        print("And the question is...")
+        if chosenTopic == topics[0]:
+            a = random.randint(0, 3)
             print(qart[a])
             answer = str(input("Enter the answer:"))
-            answer.lower()
-            if answer == aart[a].lower():
-                print("You are right")
-                score+1
-                count+1
+            if answer == aart[a]:
+                print("ALRIGHT BOYYYY")
+                score = score + 1
+                count = count + 1
             else:
                 print("wrongggggg")
-                count+1
-        elif a ==2:
+                count = count + 1
+            continue
+        elif chosenTopic == topics[1]:
             a = random.randint(0, 3)
             print(qhistory[a])
             answer = str(input("Enter the answer:"))
-            answer.lower()
-            if answer == ahistory[a].lower():
-                print("You are right")
-                score+1
-                count+1
+            if answer == ahistory[a]:
+                print("ALRIGHT BOYYYY")
+                score = score + 1
+                count = count + 1
             else:
                 print("wrongggggg")
-                count+1
-        elif a ==3:
+                count = count + 1
+            continue
+        elif chosenTopic == topics[2]:
             a = random.randint(0, 3)
             print(qsport[a])
             answer = str(input("Enter the answer:"))
-            answer.lower()
-            if answer == asport[a].lower():
-                print("You are right")
-                score + 1
-                count + 1
+            if answer == asport[a]:
+                print("ALRIGHT BOYYYY")
+                score = score + 1
+                count = count + 1
             else:
                 print("wrongggggg")
-                count + 1
-        elif a == 4:
+                count = count + 1
+            continue
+        elif chosenTopic == topics[3]:
             a = random.randint(0, 3)
             print(qentertainment[a])
             answer = str(input("Enter the answer:"))
-            answer.lower()
-            if answer == aentertainment[a].lower():
-                print("You are right")
-                score + 1
-                count + 1
+            if answer == aentertainment[a]:
+                print("ALRIGHT BOYYYY")
+                score = score + 1
+                count = count + 1
             else:
                 print("wrongggggg")
-                count + 1
-        elif a == 5:
+                count = count + 1
+            continue
+        elif chosenTopic == topics[4]:
             a = random.randint(0, 3)
             print(qgeography[a])
             answer = str(input("Enter the answer:"))
-            answer.lower()
-            if answer == ageography[a].lower():
-                print("You are right")
-                score + 1
-                count + 1
+            if answer == ageography[a]:
+                print("ALRIGHT BOYYYY")
+                score = score + 1
+                count = count + 1
             else:
                 print("wrongggggg")
-                count + 1
-    print("You answered" + score + "correctly")
+                count = count + 1
+            continue
+    print("You answered " + (str(score)) + " correctly")
 
     def history(score,num):
     qhist = ["¿Who discovered America?", " ¿In which year finished World War 2", "¿In which country was born Hitler?"]
