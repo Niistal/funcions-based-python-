@@ -12,7 +12,7 @@ def history():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Cristobal Colon":
+        if erantzuna.lower() == "cristobal colon":
             print("the answer is Correct")
             score + 1
         else:
@@ -23,7 +23,7 @@ def history():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "1945":
+        if erantzuna.lower() == "1945":
             print("the answer is Correct")
             score + 1
         else:
@@ -34,7 +34,7 @@ def history():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Austria":
+        if erantzuna.lower() == "austria":
             print("the answer is Correct")
             score + 1
         else:
@@ -52,7 +52,7 @@ def sport():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Argentina":
+        if erantzuna.lower() == "argentina":
             print("the answer is Correct")
             score + 1
         else:
@@ -63,7 +63,7 @@ def sport():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Lebron James":
+        if erantzuna.lower() == "lebron james":
             print("the answer is Correct")
             score + 1
         else:
@@ -74,7 +74,7 @@ def sport():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Usain Bolt":
+        if erantzuna.lower() == "usain bolt":
             print("the answer is Correct")
             score + 1
         else:
@@ -93,7 +93,7 @@ def entertainment():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Ash Ketchum":
+        if erantzuna.lower()== "ash ketchum":
             print("the answer is Correct")
             score + 1
         else:
@@ -104,7 +104,7 @@ def entertainment():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Kamehameha":
+        if erantzuna.lower() == "kamehameha":
             print("the answer is Correct")
             score + 1
 
@@ -116,7 +116,7 @@ def entertainment():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Toy Story":
+        if erantzuna.lower() == "toy story":
             print("the answer is Correct")
             score + 1
         else:
@@ -134,7 +134,7 @@ def geography():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "China":
+        if erantzuna.lower() == "china":
             print("the answer is Correct")
             score + 1
         else:
@@ -145,7 +145,7 @@ def geography():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Everest":
+        if erantzuna.lower() == "everest":
             print("the answer is Correct")
             score + 1
         else:
@@ -156,7 +156,7 @@ def geography():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Washington DC":
+        if erantzuna.lower() == "washington dc":
             print("the answer is Correct")
             score + 1
         else:
@@ -174,7 +174,7 @@ def art():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Leonardo da Vinci":
+        if erantzuna.lower() == "leonardo da vinci":
             print("the answer is Correct")
             score + 1
         else:
@@ -185,7 +185,7 @@ def art():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Leonardo da Vinci":
+        if erantzuna.lower() == "leonardo da vinci":
             print("the answer is Correct")
             score + 1
         else:
@@ -196,7 +196,7 @@ def art():
         print(preg)
         erantzuna = input()
 
-        if erantzuna == "Vincent van Gogh":
+        if erantzuna.lower() == "vincent van gogh":
             print("the answer is Correct")
             score + 1
         else:
