@@ -311,12 +311,12 @@ def Preguntadosbutrandomized():
     while count <=5:
         num = 3
         if count == 0:
-            print("and the topic is")
+            print("and the topic is",end="")
             for i in range(1, num + 1):
-                print("." end="")
+                print("." ,end="")
         a = int(randint(0,5))
         print(topics[a])
-        print("And the question is...")
+        print("And the question is...",end="")
         if a == 1:
             a = random.randint(0,3)
             print(qart[a])
