@@ -375,44 +375,44 @@ def Preguntadosbutrandomized():
             continue
     print("You answered " + (str(score)) + " correctly")
 
-    def history(score,num):
-    qhist = ["¿Who discovered America?", " ¿In which year finished World War 2", "¿In which country was born Hitler?"]
-    ahist = ["Cristobal Colon", "1945", "Austria"]
+def history(score,num):
+        qhist = ["¿Who discovered America?", " ¿In which year finished World War 2", "¿In which country was born Hitler?"]
+        ahist = ["Cristobal Colon", "1945", "Austria"]
 
-    a = random.randrange(0, 3)
+        a = random.randrange(0, 3)
 
-    if a == 1:
-        preg = "¿Who discovered America?"
-        print(preg)
-        erantzuna = input()
+        if a == 1:
+            preg = "¿Who discovered America?"
+            print(preg)
+            erantzuna = input()
 
-        if erantzuna.lower() == "cristobal colon":
-            print("the answer is Correct")
-            score + 1
-        else:
-            print("the answer is incorrect")
+            if erantzuna.lower() == "cristobal colon":
+                print("the answer is Correct")
+                score + 1
+            else:
+                print("the answer is incorrect")
 
-    if a == 2:
-        preg = "¿In which year finished World War 2"
-        print(preg)
-        erantzuna = input()
+        if a == 2:
+            preg = "¿In which year finished World War 2"
+            print(preg)
+            erantzuna = input()
 
-        if erantzuna.lower() == "1945":
-            print("the answer is Correct")
-            score + 1
-        else:
-            print("the answer is incorrect")
+            if erantzuna.lower() == "1945":
+                print("the answer is Correct")
+                score + 1
+            else:
+                print("the answer is incorrect")
 
-    if a == 3:
-        preg = "¿In which country was born Hitler?"
-        print(preg)
-        erantzuna = input()
+        if a == 3:
+            preg = "¿In which country was born Hitler?"
+            print(preg)
+            erantzuna = input()
 
-        if erantzuna.lower() == "austria":
-            print("the answer is Correct")
-            score + 1
-        else:
-            print("the answer is incorrect")
+            if erantzuna.lower() == "austria":
+                print("the answer is Correct")
+                score + 1
+            else:
+                print("the answer is incorrect")
 
 
 def sport(score,num):
