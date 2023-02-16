@@ -16,7 +16,7 @@ def tablero(a):#for printing the table
 def p1aldatu(a,name1):#for calling the table and asks a value to the user player 1
 
     print(str(name1) + "'s turn")
-    print("Enter a number from 1 to 9")
+    print("Enter a number from 0 to 8")
     tablero(a)
     b = int(input())
     if a[b] == 0:
@@ -33,7 +33,7 @@ def p1aldatu(a,name1):#for calling the table and asks a value to the user player
 def p2aldatu(a,name2):#for calling the table and asks a value to the user player 1
     
     print(str(name2) + "'s turn")
-    print("Enter a number from 1 to 9")
+    print("Enter a number from 0 to 8")
     tablero(a)
     player= int(input())
     if a[player] == 0:
