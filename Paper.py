@@ -577,7 +577,7 @@ def art(score,num):
             print("the answer is incorrect")
 
 
-def NistalMain(score):
+def NistalMain():
 
     score = 0
     name = input("Enter your name please ")
