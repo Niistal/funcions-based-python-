@@ -23,7 +23,7 @@ def Preguntadosbutrandomized():
         print(chosenTopic)
         print("And the question is...")
         if chosenTopic == topics[0]:
-            a = random.randint(0, 3)
+            a = random.randint(0, 2)
             print(qart[a])
             answer = str(input("Enter the answer:"))
             if answer == aart[a]:
@@ -35,7 +35,7 @@ def Preguntadosbutrandomized():
                 count = count + 1
             continue
         elif chosenTopic == topics[1]:
-            a = random.randint(0, 3)
+            a = random.randint(0, 2)
             print(qhistory[a])
             answer = str(input("Enter the answer:"))
             if answer == ahistory[a]:
@@ -47,7 +47,7 @@ def Preguntadosbutrandomized():
                 count = count + 1
             continue
         elif chosenTopic == topics[2]:
-            a = random.randint(0, 3)
+            a = random.randint(0, 2)
             print(qsport[a])
             answer = str(input("Enter the answer:"))
             if answer == asport[a]:
@@ -59,7 +59,7 @@ def Preguntadosbutrandomized():
                 count = count + 1
             continue
         elif chosenTopic == topics[3]:
-            a = random.randint(0, 3)
+            a = random.randint(0, 2)
             print(qentertainment[a])
             answer = str(input("Enter the answer:"))
             if answer == aentertainment[a]:
@@ -71,7 +71,7 @@ def Preguntadosbutrandomized():
                 count = count + 1
             continue
         elif chosenTopic == topics[4]:
-            a = random.randint(0, 3)
+            a = random.randint(0, 2)
             print(qgeography[a])
             answer = str(input("Enter the answer:"))
             if answer == ageography[a]:
@@ -83,6 +83,14 @@ def Preguntadosbutrandomized():
                 count = count + 1
             continue
     print("You answered " + (str(score)) + " correctly")
+    f = open("testua2.txt", "a")
+    s = input("Write your name:")
+    f.write(s)
+    f.write("\n")
+    s3 = input("Write how many questions you answered correctly: ")
+    f.write(s3)
+    f.write("\n")
+    f.close()
 
 
 from random import randint
