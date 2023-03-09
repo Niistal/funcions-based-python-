@@ -80,6 +80,8 @@ def TicTacToe():
     elif sing == 2:#Multiplayer mode
         z = 2
     g = 1
+    firstpoints = 0
+    secondpoints = 0
     while g ==1:
         while c != 1:
             c = 2
@@ -149,69 +151,121 @@ def TicTacToe():
                     c = 1
             elif sing == 2:#Executates if user chose Multi player
                 if z == 2:#asks for names
-                    player1 = str(input("Enter player 1's name please:"))
-                    player2 = str(input("Enter player 2's name please:"))
+                    fw.write(str(input("Enter player 1's name please:")))
+                    fw.write("\n")
+                    fr.write(str(input("Enter player 2's name please:")))
+                    fw.write("\n")
+                    fw.write(fr.readline(1))
+                    fw.write("\n")
+                    fr.write(fr.readline(3))
+                    lines = fr.readlines()
                     z = -1
                 while d == 1:#funciton for table and selecting cell for the player 1
-                    p1aldatu(a,player1)
+                    p1aldatu(a,fr.readline(1))
                     d = 2
                     time.sleep(3)
                     os.system('cls')
                 while d == 2:#funciton for table and selecting cell for the player 1
-                    p2aldatu(a,player2)
+                    p2aldatu(a,fr.readline(3))
                     d = 1
                     time.sleep(3)
                 
                 #checks if player 1 won
                 if a[0] == 'X' and a[1] == 'X' and a[2] == 'X':
                     print(player1 + " wins")
+                    firstpoints + 1
+                    fw.truncate(5)
+                    lines[5] = fw.write(fr.readline(1) + firstpoints) 
                     c = 1
                 elif a[0] == 'X' and a[3] == 'X' and a[6] == 'X':
                     print(player1 + " wins")
+                    firstpoints + 1
+                    fw.truncate(5)
+                    lines[5] = fw.write(fr.readline(1) + firstpoints) 
                     c = 1
                 elif a[0] == 'X' and a[4] == 'X' and a[8] == 'X':
                     print(player1 + " wins")
+                    firstpoints + 1
+                    fw.truncate(5)
+                    lines[5] = fw.write(fr.readline(1) + firstpoints) 
                     c = 1
                 elif a[6] == 'X' and a[4] == 'X' and a[2] == 'X':
                     print(player1 + " wins")
+                    firstpoints + 1
+                    fw.truncate(5)
+                    lines[5] = fw.write(fr.readline(1) + firstpoints) 
                     c = 1
                 elif a[3] == 'X' and a[4] == 'X' and a[5] == 'X':
                     print(player1 + " wins")
+                    firstpoints + 1
+                    fw.truncate(5)
+                    lines[5] = fw.write(fr.readline(1) + firstpoints) 
                     c = 1
                 elif a[6] == 'X' and a[7] == 'X' and a[8] == 'X':
                     print(player1 + " wins")
+                    firstpoints + 1
+                    fw.truncate(5)
+                    lines[5] = fw.write(fr.readline(1) + firstpoints) 
                     c = 1
                 elif a[7] == 'X' and a[4] == 'X' and a[1] == 'X':
                     print(player1 + " wins")
+                    firstpoints + 1
+                    fw.truncate(5)
+                    lines[5] = fw.write(fr.readline(1) + firstpoints) 
                     c = 1
                 elif a[8] == 'X' and a[4] == 'X' and a[2] == 'X':
                     print(player1 + " wins")
+                    firstpoints + 1
+                    fw.truncate(5)
+                    lines[5] = fw.write(fr.readline(1) + firstpoints) 
                     c = 1
 
                     # check for player 2
                 if a[0] == 'O' and a[1] == 'O' and a[2] == 'O':
-                    print(player2 + " wins")
+                    print(fr.readline(3) + " wins")
+                    secondpoints + 1 
+                    fw.truncate(7)
+                    lines[7] = fw.write(fr.readline(1) + secondpoints) 
                     c = 1
                 elif a[0] == 'O' and a[3] == 'O' and a[6] == 'O':
-                    print(player2 + " wins")
+                    print(fr.readline(3) + " wins")
+                    secondpoints + 1 
+                    fw.truncate(7)
+                    lines[7] = fw.write(fr.readline(1) + secondpoints) 
                     c = 1
                 elif a[0] == 'O' and a[4] == 'O' and a[8] == 'O':
-                    print(player2 + " wins")
+                    print(fr.readline(3) + " wins")
+                    secondpoints + 1 
+                    fw.truncate(7)
+                    lines[7] = fw.write(fr.readline(1) + secondpoints) 
                     c = 1
                 elif a[6] == 'O' and a[4] == 'O' and a[2] == 'O':
-                    print(player2 + " wins")
+                    print(fr.readline(3)+ " wins")
+                    secondpoints + 1 
                     c = 1
                 elif a[3] == 'O' and a[4] == 'O' and a[5] == 'O':
-                    print(player2 + " wins")
+                    print(fr.readline(3) + " wins")
+                    secondpoints + 1 
+                    fw.truncate(7)
+                    lines[7] = fw.write(fr.readline(1) + secondpoints) 
                     c = 1
                 elif a[6] == 'O' and a[7] == 'O' and a[8] == 'O':
-                    print(player2 + " wins")
+                    print(fr.readline(3) + " wins")
+                    secondpoints + 1 
+                    fw.truncate(7)
+                    lines[7] = fw.write(fr.readline(1) + secondpoints) 
                     c = 1
                 elif a[7] == 'O' and a[4] == 'O' and a[1] == 'O':
-                    print(player2 + " wins")
+                    print(fr.readline(3) + " wins")
+                    secondpoints + 1 
+                    fw.truncate(7)
+                    lines[7] = fw.write(fr.readline(1) + secondpoints) 
                     c = 1
                 elif a[8] == 'O' and a[4] == 'O' and a[2] == 'O':
-                    print(player2 + " wins")
+                    print(fr.readline(3) + " wins")
+                    secondpoints + 1 
+                    fw.truncate(7)
+                    lines[7] = fw.write(fr.readline(1) + secondpoints) 
                     c = 1
         #asks if the user wants to run the program again
         print("Do you want to repeat the program, YES/NO")
@@ -226,16 +280,23 @@ def TicTacToe():
             g = 0
 
 
-a = 0
-#Menu
-print("MENU:")
-print("=======================================")
-print("1.-Rock,Paper,Scissors")
-print("2.-Tic tac toe")
-print("3.-Preguntados")
 
-#asks for a value and selects the casters
-a = int(input("Select an option please:"))
+while a != 7:
+    fr = open("Results.txt","r")
+    fw = open("Results.txt","w+")
 
-match a:
-    case 2: TicTacToe()
+    a = 0
+    #Menu
+    print("MENU:")
+    print("=======================================")
+    print("1.-Rock,Paper,Scissors")
+    print("2.-Tic tac toe")
+    print("3.-Preguntados")
+    print("7.-Exit")
+
+    #asks for a value and selects the casters
+    a = int(input("Select an option please:"))
+
+    match a:
+        case 2: TicTacToe()
+    
