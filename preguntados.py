@@ -1,6 +1,8 @@
 import random
 
 
+
+
 def history():
     qhist = ["¿Who discovered America?", " ¿In which year finished World War 2", "¿In which country was born Hitler?"]
     ahist = ["Cristobal Colon", "1945", "Austria"]
@@ -196,7 +198,7 @@ def art():
         print(preg)
         erantzuna = input()
 
-        if erantzuna.lower() == "vincent van gogh":
+        if erantzuna.lower() == "new york":
             print("the answer is Correct")
             score + 1
         else:
@@ -240,5 +242,15 @@ while num != 6:
 
 print(score)
 
+f=open("your score.txt","a+")#a append, r read, write
+list=[]
+s=input(" your name")
+list.append(s)
+s2=input("your score")
+list.append(s2)
+
+for element in list:
+   f.write(element + "\n")
+f.close()
 
 
